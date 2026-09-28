@@ -7,7 +7,7 @@ This project provides a terminal-based computational suite covering core number 
 
 ## Project Structure 
 
-CSE1021-Math-Toolkit
+'''CSE1021-Math-Toolkit
 │ 
 ├── module                    # Package containing core logic modules 
 │   ├── init.py               # Package marker 
@@ -22,3 +22,4 @@ CSE1021-Math-Toolkit
 ├── statement.md              # Problem Statement & Scope Document 
 ├── execution.log             # Auto-generated execution log file 
 └── README.md                 # Project Setup & User Guide
+'''
