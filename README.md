@@ -9,7 +9,7 @@ This project provides a terminal-based computational suite covering core number 
 ```text
 CSE1021-Math-Toolkit
 │
-├── modules/                      # Package containing core logic modules
+├── module/                      # Package containing core logic module
 │   ├── __init__.py               # Package marker
 │   ├── factoring_engine.py       # Euclidean GCD, Primes, Sieve, Square Root
 │   ├── sequence_analytics.py     # Fibonacci, Modular Exponentiation, LCG Pseudo-Random
