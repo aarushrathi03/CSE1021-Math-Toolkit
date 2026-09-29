@@ -49,8 +49,8 @@ def menu_factoring():
         if not valid_b:
             print(f"Error: {msg_b}")
             return           
-        res = GCD_euclid(a, b) # If your function in factoring_engine is GCD_euclid, keep GCD_euclid(a, b)
-        print(f"-> GCD({a}, {b}) = {res}")
+        res = GCD_euclid(a, b)
+        print(f"GCD({a}, {b}) = {res}")
         log_operation("GCD", f"a={a}, b={b}, result={res}")
         
     elif choice == "2":
@@ -59,7 +59,7 @@ def menu_factoring():
             print(f"Error: {msg}")
             return           
         res = prime_factors(n)
-        print(f"-> Prime Factors of {n}: {res}")
+        print(f"Prime Factors of {n}: {res}")
         log_operation("PRIME_FACTORS", f"n={n}, result={res}")
         
     elif choice == "3":
@@ -68,7 +68,7 @@ def menu_factoring():
             print(f"Error: {msg}")
             return            
         res = smallest_divisor(n)
-        print(f"-> Smallest Divisor of {n}: {res}")
+        print(f"Smallest Divisor of {n}: {res}")
         log_operation("SMALLEST_DIVISOR", f"n={n}, result={res}")
         
     elif choice == "4":
@@ -77,7 +77,7 @@ def menu_factoring():
             print(f"Error: {msg}")
             return           
         res = generate_primes(limit)
-        print(f"-> Primes up to {limit}: {res}")
+        print(f"Primes up to {limit}: {res}")
         log_operation("GENERATE_PRIMES", f"limit={limit}, count={len(res)}")
         
     elif choice == "5":
@@ -86,7 +86,7 @@ def menu_factoring():
             print(f"Error: {msg}")
             return
         res = integer_square_root(n)
-        print(f"-> Integer Square Root of {n}: {res}")
+        print(f"Integer Square Root of {n}: {res}")
         log_operation("SQUARE_ROOT", f"n={n}, result={res}")
 
     elif choice == "0":
@@ -112,7 +112,7 @@ def menu_sequences():
             print(f"Error: {msg}")
             return           
         res = fibonacci_sequence(terms)
-        print(f"-> Fibonacci ({terms} terms): {res}")
+        print(f"Fibonacci ({terms} terms): {res}")
         log_operation("FIBONACCI_SEQ", f"terms={terms}, result={res}")
         
     elif choice == "2":
@@ -121,7 +121,7 @@ def menu_sequences():
             print(f"Error: {msg}")
             return         
         res = nth_fibonacci(n)
-        print(f"-> {n}-th Fibonacci Number: {res}")
+        print(f"{n}-th Fibonacci Number: {res}")
         log_operation("NTH_FIBONACCI", f"n={n}, result={res}")
         
     elif choice == "3":
@@ -138,7 +138,7 @@ def menu_sequences():
             print(f"Error: {msg_m}")
             return        
         res = power_modulo(base, exp, mod)
-        print(f"-> ({base}^{exp}) % {mod} = {res}")
+        print(f"({base}^{exp}) % {mod} = {res}")
         log_operation("MODULAR_EXP", f"base={base}, exp={exp}, mod={mod}, result={res}")
         
     elif choice == "4":
@@ -151,7 +151,7 @@ def menu_sequences():
             print(f"Error: {msg_c}")
             return  
         res = pseudo_random_gen(seed, count, 1, 100)
-        print(f"-> Generated Pseudo-Random List (1-100): {res}")
+        print(f"Generated Pseudo-Random List (1-100): {res}")
         log_operation("PSEUDO_RANDOM", f"seed={seed}, count={count}, result={res}")
 
     elif choice == "0":
@@ -179,13 +179,13 @@ def menu_arrays():
    
         if choice == "1":
             res = reverse_array(arr)
-            print(f"-> Original: {arr}")
-            print(f"-> Reversed: {res}")
+            print(f"Original: {arr}")
+            print(f"Reversed: {res}")
             log_operation("REVERSE_ARRAY", f"original={arr}, result={res}")
             
         elif choice == "2":
             res = remove_duplicates(arr)
-            print(f"-> Unique Array: {res}")
+            print(f"Unique Array: {res}")
             log_operation("REMOVE_DUPLICATES", f"result={res}")
             
         elif choice == "3":
@@ -194,9 +194,9 @@ def menu_arrays():
                 print(f"Error: {msg_p}")
                 return    
             less, equal, greater = partition_array(arr, pivot)
-            print(f"-> Less than {pivot}: {less}")
-            print(f"-> Equal to {pivot}: {equal}")
-            print(f"-> Greater than {pivot}: {greater}")
+            print(f"Less than {pivot}: {less}")
+            print(f"Equal to {pivot}: {equal}")
+            print(f"Greater than {pivot}: {greater}")
             log_operation("PARTITION_ARRAY", f"pivot={pivot}, less={less}, equal={equal}, greater={greater}")
             
         elif choice == "4":
@@ -205,7 +205,7 @@ def menu_arrays():
                 print(f"Error: {msg_k}")
                 return     
             res = kth_smallest_element(arr, k)
-            print(f"-> {k}-th Smallest Element: {res}")
+            print(f"{k}-th Smallest Element: {res}")
             log_operation("KTH_SMALLEST", f"k={k}, result={res}")
 
         elif choice == "0":
@@ -234,7 +234,7 @@ def menu_base_conversions():
             print(f"Error: {msg_b}")
             return  
         res = decimal_to_base(n, base)
-        print(f"-> Decimal {n} in Base {base}: {res}")
+        print(f"Decimal {n} in Base {base}: {res}")
         log_operation("DECIMAL_TO_BASE", f"n={n}, base={base}, result={res}")
         
     elif choice == "2":
@@ -245,7 +245,7 @@ def menu_base_conversions():
             return  
         try:
             res = base_to_decimal(s, base)
-            print(f"-> Base {base} '{s}' in Decimal: {res}")
+            print(f"Base {base} '{s}' in Decimal: {res}")
             log_operation("BASE_TO_DECIMAL", f"s={s}, base={base}, result={res}")
         except ValueError as e:
             print(f"Error: {e}")
@@ -254,7 +254,7 @@ def menu_base_conversions():
         char = input("Enter a single character: ")
         if len(char) == 1:
             res = char_to_num(char)
-            print(f"-> ASCII value of '{char}': {res}")
+            print(f"ASCII value of '{char}': {res}")
             log_operation("CHAR_TO_NUM", f"char={char}, ascii={res}")
         else:
             print("Error: Input must be exactly 1 character.")
@@ -265,7 +265,7 @@ def menu_base_conversions():
             print(f"Error: {msg_v}")
             return  
         res = num_to_char(val)
-        print(f"-> Character for ASCII {val}: '{res}'")
+        print(f"Character for ASCII {val}: '{res}'")
         log_operation("NUM_TO_CHAR", f"ascii={val}, char={res}")
 
     elif choice == "0":
@@ -303,17 +303,16 @@ def main():
             menu_base_conversions()
 
         elif choice == "5":
-            print("\n--- Recent Log History (`execution.log`) ---")
+            print("\nRecent Log History (`execution.log`):")
             logs = read_logs("execution.log")
             for line in logs[-10:]:
                 print(line, end="")
 
         elif choice == "6":
-            print("\n--- Project &amp; Developer Metadata ---")
+            print("Developer & Project Information ")
             print("Project: Algorithmic Mathematical & Number Theory Toolkit")
             print("Developer: Aarush Rathi (26BEC10121)")
             print("Description: This toolkit provides various mathematical, number theory, and array operations.")
-            print("Architecture : 10 Modular Files (CLI)")
 
         elif choice == "0":
             print("\nExiting Algorithmic Toolkit. Goodbye!")
